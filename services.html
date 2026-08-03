@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - Shades Unisex Salon</title>
+  <!-- Google Fonts: Playfair Display and Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pink: '#f4d0d9',
+            plum: '#6b4c5e',
+            'plum-dark': '#4a1e36',
+            'plum-muted': '#8a5e68',
+            bg: '#fbf9f8',
+            muted: '#dcd9d9',
+            text: '#2d2d2d',
+            'text-soft': '#333333',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            rounded: '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/services.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen">
+  <!-- BEGIN: Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">Shades</a>
+      <nav class="nav-list">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link-active" href="services.html">Services</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+      </nav>
+      <div class="text-right">
+        <a class="btn-book" href="#booking">Book Now</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a class="mobile-nav-link" href="index.html">Home</a>
+        <a class="mobile-nav-link-active" href="services.html">Services</a>
+        <a class="mobile-nav-link" href="contact.html">Contact</a>
+        <a class="mobile-nav-link" href="gallery.html">Gallery</a>
+      </nav>
+      <a class="mobile-btn-book" href="#booking">Book Now</a>
+    </div>
+  </header>
+  <!-- END: Navigation -->
+  <main>
+    <!-- BEGIN: HeroSection -->
+    <section class="services-hero bg-surface">
+      <h1 class="title-page">Our Services</h1>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: IntroSection -->
+    <section class="border-t border-pink">
+      <div class="max-w-7xl mx-auto px-4 intro-section">
+        <div class="intro-layout">
+        <div class="salon-image">
+          <img alt="Shades Unisex Salon Services" class="w-full h-full object-cover"
+            src="images/Services/Services-Image.jpeg">
+        </div>
+        <div class="intro-text">
+          <h2 class="heading-intro serif mb-4">Find the Right Service for You</h2>
+          <p class="text-gray-600 leading-[2]">
+            Whether you are refreshing your look, maintaining healthy hair, or caring for your natural texture, Shades Salon offers price ranges designed to suit different needs. Browse the available services and price ranges to get a clearer idea of what may work for you before making a request.
+          </p>
+          <p class="text-gray-600 leading-[2] mt-4">
+            Prices may vary depending on hair length, condition and service requirements, so customers are encouraged to reach out for further guidance before confirming a service.
+          </p>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- END: IntroSection -->
+    <!-- BEGIN: ServicesList -->
+    <section class="border-t border-pink">
+      <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="text-center mb-8">
+        <h2 class="heading-section-title serif">Services and Pricing</h2>
+      </div>
+      <!-- General Hair Care -->
+      <div class="mb-8">
+        <h3 class="service-category" id="general-hair-care">General
+          Hair Care</h3>
+        <div class="mt-2 space-y-0">
+          <!-- Row 1 -->
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Wash &amp; Blow Dry</h4>
+              <p class="text-desc">For general cleansing and styling</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$150 - 250</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Hair Trim</h4>
+              <p class="text-desc">For maintaining healthy ends and shape</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$60 - 100</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Basic Styling</h4>
+              <p class="text-desc">For everyday styling based on hair type and service needs</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$150 - 300</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Natural Hair Care -->
+      <div class="mb-8">
+        <h3 class="service-category" id="natural-hair-care">Natural
+          Hair Care</h3>
+        <div class="mt-2 space-y-0">
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Natural Hair Wash &amp; Style</h4>
+              <p class="text-desc">For cleansing, styling and maintaining natural hair.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$200 - 300</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Protective Styling</h4>
+              <p class="text-desc">For simple natural styles that support manageability.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$250 - 500</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Natural Hair Care Consultation</h4>
+              <p class="text-desc">For discussing hair condition, routine and service options.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$100 - 150</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hair and Scalp Treatments -->
+      <div class="mb-8">
+        <h3 class="service-category" id="hair-scalp-treatments">Hair and
+          Scalp Treatments</h3>
+        <div class="mt-2 space-y-0">
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Deep Conditioning Treatment</h4>
+              <p class="text-desc">For improving moisture, softness and manageability.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$150 - 250</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Scalp Treatment</h4>
+              <p class="text-desc">For supporting a cleaner and healthier scalp.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$200 - 350</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Hair Repair Treatment</h4>
+              <p class="text-desc">For hair needing extra care due to dryness or damage.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$250 - 500</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Relaxers -->
+      <div class="mb-8">
+        <h3 class="service-category" id="relaxers">Relaxers
+        </h3>
+        <div class="mt-2 space-y-0">
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Relaxer Retouch</h4>
+              <p class="text-desc">For maintaining previously relaxed hair.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$250 - 350</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Virgin Relaxer</h4>
+              <p class="text-desc">For clients relaxing natural hair for the first time.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$350 - 500</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Relaxer with Treatment</h4>
+              <p class="text-desc">Includes relaxing service with added hair care support.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$400 - 500</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Colouring -->
+      <div class="mb-8">
+        <h3 class="service-category" id="colouring">Colouring
+        </h3>
+        <div class="mt-2 space-y-0">
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Full Hair Colour</h4>
+              <p class="text-desc">For clients looking to refresh or change their hair colour.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$350 - 700</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Root Touch-Up</h4>
+              <p class="text-desc">For maintaining new growth and keeping colour consistent.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$200 - 300</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="flex-grow">
+              <h4 class="service-name">Highlights / Colour Accents</h4>
+              <p class="text-desc">For adding brightness, contrast or dimension to the hair.</p>
+            </div>
+              <div class="service-price">
+              <span class="text-price">$250 - 600</span>
+              <a class="btn-sm" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- END: ServicesList -->
+    <!-- BEGIN: BookingSection -->
+    <section class="bg-[#f6f3f2] py-14 px-4 border-t border-pink" id="booking">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="heading-intro serif mb-2">Interested in any of these services?</h2>
+          <p class="text-gray-600">Submit a booking form to us and we will get back to you as soon as possible!</p>
+        </div>
+        <div class="booking-card">
+          <h3 class="booking-title">Booking Form</h3>
+          <form class="space-y-6">
+            <div class="booking-form-grid">
+              <input class="booking-input" placeholder="First Name" type="text">
+              <input class="booking-input" placeholder="Last Name" type="text">
+              <input class="booking-input" placeholder="Phone number" type="tel">
+              <input class="booking-input" placeholder="Email Address" type="email">
+              <select class="booking-input" id="booking-category">
+                <option value="">Choose a category</option>
+              </select>
+              <select class="booking-input" id="booking-service" disabled>
+                <option value="">Select a category first</option>
+              </select>
+              <input class="booking-input" type="date" id="booking-date">
+              <select class="booking-input" id="booking-time" disabled>
+                <option value="">Select a date first</option>
+              </select>
+            </div>
+            <div>
+              <textarea class="booking-input" placeholder="Message" rows="5"></textarea>
+            </div>
+            <div class="booking-buttons">
+              <button class="btn-reset-services"
+                type="reset">Reset</button>
+              <button class="btn px-12 py-3 rounded font-medium" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- END: BookingSection -->
+  </main>
+  <!-- BEGIN: Footer -->
+  <footer class="bg-white border-t border-pink py-4 px-4">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Shades</a>
+      <div>© 2026 Shades Unisex Salon. All rights reserved.</div>
+      <div>WhatsApp: (868) 791-9851 &nbsp;|&nbsp; El Dorado, Trinidad</div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+<script src="js/hamburger.js"></script>
+<script src="js/services/booking.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gallery - Shades Unisex Salon</title>
+  <!-- Google Fonts: Playfair Display and Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pink: '#f4d0d9',
+            plum: '#6b4c5e',
+            'plum-dark': '#4a1e36',
+            'plum-muted': '#8a5e68',
+            bg: '#fbf9f8',
+            muted: '#dcd9d9',
+            text: '#2d2d2d',
+            'text-soft': '#333333',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            rounded: '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/gallery.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col">
+  <!-- BEGIN: Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">Shades</a>
+      <nav class="nav-list">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link-active" href="gallery.html">Gallery</a>
+      </nav>
+      <div class="text-right">
+        <a class="btn-book" href="services.html#booking">Book Now</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a class="mobile-nav-link" href="index.html">Home</a>
+        <a class="mobile-nav-link" href="services.html">Services</a>
+        <a class="mobile-nav-link" href="contact.html">Contact</a>
+        <a class="mobile-nav-link-active" href="gallery.html">Gallery</a>
+      </nav>
+      <a class="mobile-btn-book" href="services.html#booking">Book Now</a>
+    </div>
+  </header>
+  <!-- END: Navigation -->
+  <main class="flex-grow">
+    <!-- BEGIN: HeroSection -->
+    <section class="gallery-hero" data-purpose="gallery-title">
+      <h1 class="title-page">Our Gallery</h1>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: GalleryGrid -->
+    <div class="border-t border-pink">
+      <div class="max-w-6xl mx-auto px-4 py-14" data-purpose="gallery-grid">
+        <div class="gallery-grid">
+        <!-- Row 1 -->
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-1.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-2.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-3.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <!-- Row 2 -->
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-4.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-5.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-6.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <!-- Row 3 -->
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-7.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-8.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+        <div class="gallery-item border-r border-b border-muted">
+          <img src="images/Gallery/photo-9.jpg" alt="Hair styling result" class="gallery-img">
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- END: GalleryGrid -->
+    <!-- BEGIN: CallToAction -->
+    <section class="bg-white py-14 border-t border-pink" data-purpose="cta-section">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="heading-md font-semibold mb-2">Interested in a Service?</h2>
+        <p class="text-gray-600 mb-8">Contact the salon to ask about services or submit a booking request</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <!-- Button styling using Plum highlight color from theme -->
+          <a href="contact.html" class="btn-cta" data-purpose="contact-btn">Contact</a>
+          <a href="services.html#booking" class="btn-cta" data-purpose="booking-btn">Booking</a>
+        </div>
+      </div>
+    </section>
+    <!-- END: CallToAction -->
+  </main>
+  <!-- BEGIN: Footer -->
+  <footer class="bg-white border-t border-pink py-4 px-4">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Shades</a>
+      <div>© 2026 Shades Unisex Salon. All rights reserved.</div>
+      <div>WhatsApp: (868) 791-9851 &nbsp;|&nbsp; El Dorado, Trinidad</div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+<script src="js/hamburger.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+/* ============================================
+   Contact page — Shades Unisex Salon
+   ============================================ */
+
+/* --- Hero --- */
+.contact-hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .contact-hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* --- Contact Grid --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Contact/location card */
+.contact-card {
+  border: 1px solid var(--muted);
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  scroll-margin-top: 6rem;
+}
+.contact-card .flex-shrink-0 {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact-card .flex-1 {
+  flex: unset;
+  max-width: 75%;
+}
+
+/* Hours card */
+.hours-card {
+  border: 1px solid var(--muted);
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  scroll-margin-top: 6rem;
+}
+.hours-card .flex-shrink-0 {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hours-card > :last-child {
+  max-width: 85%;
+}
+@media (min-width: 768px) {
+  .hours-card {
+    padding: 3rem;
+    gap: 3rem;
+  }
+}
+
+/* Hide contact card icons on small screens */
+@media (max-width: 1023px) {
+  .contact-card svg,
+  .hours-card svg {
+    display: none;
+  }
+}
+
+/* Map box */
+.map-box {
+  width: 100%;
+  height: 32rem;
+  background-color: var(--muted);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--muted);
+  scroll-margin-top: 6rem;
+}
+
+/* Anchor target for location map */
+#location-map {
+  scroll-margin-top: 6rem;
+}
+
+/* Form fields grid */
+.form-field-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .form-field-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Form input */
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.15s ease;
+}
+.form-input:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 2px rgba(244, 208, 217, 0.5);
+}
+
+/* Form buttons row */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .form-buttons {
+    justify-content: flex-end;
+  }
+}
+
+.btn-reset-form {
+  padding: 0.75rem 2.5rem;
+  background-color: var(--muted);
+  color: var(--text);
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  transition: opacity 0.15s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.btn-reset-form:hover {
+  opacity: 0.75;
+}
+
+.btn-submit-form {
+  padding: 0.75rem 2.5rem;
+  background-color: var(--plum-muted);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: opacity 0.15s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.btn-submit-form:hover {
+  opacity: 0.9;
+}
+
+/* Hours rows */
+.dotted-line {
+  flex-grow: 1;
+  border-bottom: 1px dotted #999;
+  margin: 0;
+  height: 0.7em;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.25rem;
+}

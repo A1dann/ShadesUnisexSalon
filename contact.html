@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact - Shades Unisex Salon</title>
+  <!-- Google Fonts: Playfair Display and Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pink: '#f4d0d9',
+            plum: '#6b4c5e',
+            'plum-dark': '#4a1e36',
+            'plum-muted': '#8a5e68',
+            bg: '#fbf9f8',
+            muted: '#dcd9d9',
+            text: '#2d2d2d',
+            'text-soft': '#333333',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            rounded: '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/contact.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen">
+  <!-- BEGIN: Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">Shades</a>
+      <nav class="nav-list">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link-active" href="contact.html">Contact</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+      </nav>
+      <div class="text-right">
+        <a class="btn-book" href="services.html#booking">Book Now</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a class="mobile-nav-link" href="index.html">Home</a>
+        <a class="mobile-nav-link" href="services.html">Services</a>
+        <a class="mobile-nav-link-active" href="contact.html">Contact</a>
+        <a class="mobile-nav-link" href="gallery.html">Gallery</a>
+      </nav>
+      <a class="mobile-btn-book" href="services.html#booking">Book Now</a>
+    </div>
+  </header>
+  <!-- END: Navigation -->
+  <main>
+    <!-- BEGIN: HeroSection -->
+    <section class="contact-hero" data-purpose="hero">
+    <h1 class="title-page">Contact Us</h1>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: OurInformation -->
+    <section class="border-t border-pink py-14">
+      <div class="max-w-7xl mx-auto px-4 space-y-12" id="our-information">
+        <h2 class="title-section">Our Information</h2>
+        <div class="contact-grid">
+        <!-- Contact Details Card -->
+        <div class="contact-card"
+          id="contact-details"
+          data-purpose="contact-card">
+          <div class="flex-shrink-0">
+            <svg class="w-20 h-20 text-text-soft" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+              </path>
+            </svg>
+          </div>
+          <div class="flex-1 text-center">
+            <h3 class="heading-card font-bold mb-2">Contact Details</h3>
+            <p class="text-gray-600">WhatsApp: (868) 791 - 9851</p>
+            <p class="text-gray-600">Landline: (868) 663 - 0325</p>
+          </div>
+        </div>
+        <!-- Location Card -->
+        <div class="contact-card"
+          data-purpose="location-card">
+          <div class="flex-shrink-0">
+            <svg class="w-20 h-20 text-text-soft" fill="currentColor" viewBox="0 0 20 20">
+              <path clip-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </div>
+          <div class="flex-1 text-center">
+            <h3 class="heading-card font-bold mb-2">Location</h3>
+            <p class="text-gray-600">Corner of Back Street and</p>
+            <p class="text-gray-600">Wilkson Street, El Dorado</p>
+          </div>
+        </div>
+      </div>
+      <!-- Opening Hours Container -->
+      <div class="hours-card"
+        id="opening-hours"
+        data-purpose="hours">
+        <div class="flex-shrink-0">
+          <svg class="w-20 h-20 text-text-soft" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+        <div class="w-full">
+          <h3 class="heading-md font-bold mb-6 text-center">Opening Hours</h3>
+          <div class="space-y-3 font-sans max-w-2xl mx-auto">
+            <div class="hours-row"><span class="">Sunday</span>
+              <div class="dotted-line"></div><span class="">10 am - 5 pm</span>
+            </div>
+            <div class="hours-row"><span class="">Monday</span>
+              <div class="dotted-line"></div><span class="">9 am - 6 pm</span>
+            </div>
+            <div class="hours-row"><span class="">Tuesday</span>
+              <div class="dotted-line"></div><span class="">9 am - 6 pm</span>
+            </div>
+            <div class="hours-row"><span class="">Wednesday</span>
+              <div class="dotted-line"></div><span class="">9 am - 6 pm</span>
+            </div>
+            <div class="hours-row"><span class="">Thursday</span>
+              <div class="dotted-line"></div><span class="">9 am - 6 pm</span>
+            </div>
+            <div class="hours-row"><span class="">Friday</span>
+              <div class="dotted-line"></div><span class="">9 am - 6 pm</span>
+            </div>
+            <div class="hours-row"><span class="">Saturday</span>
+              <div class="dotted-line"></div><span class="font-semibold text-red-700">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- END: OurInformation -->
+    <!-- BEGIN: MapSection -->
+    <section class="border-t border-pink py-14">
+      <div class="max-w-7xl mx-auto px-4 space-y-8" id="location-map">
+        <h2 class="title-section">Our Location</h2>
+        <div class="map-box"
+        data-purpose="map">
+        <iframe
+          src="https://www.google.com/maps?q=10.645661%2C-61.3774187&z=18&output=embed"
+          class="w-full h-full"
+          style="border:0"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Shades Beauty Salon location">
+        </iframe>
+      </div>
+    </div>
+    </section>
+    <!-- END: MapSection -->
+    <!-- BEGIN: ContactFormSection -->
+    <section class="bg-[#f6f3f2] border-t border-pink py-14 px-4">
+      <div class="max-w-4xl mx-auto space-y-8" id="email-us">
+        <div class="text-center">
+        <h2 class="heading-section-title font-bold mb-2">Email Us</h2>
+        <p class="text-gray-600">Have an enquiry? Fill out this form and we'll get back to you</p>
+      </div>
+      <form action="#" class="space-y-6" data-purpose="form" method="POST">
+        <div class="form-field-grid">
+          <div>
+              <input class="form-input"
+                id="first-name" name="first-name" placeholder="First Name" required="" type="text">
+          </div>
+          <div>
+              <input class="form-input"
+                id="last-name" name="last-name" placeholder="Last Name" required="" type="text">
+          </div>
+          <div>
+              <input class="form-input"
+                id="email" name="email" placeholder="Email Address" required="" type="email">
+          </div>
+          <div>
+              <input class="form-input"
+                id="phone" name="phone" placeholder="Phone Number" type="tel">
+          </div>
+        </div>
+        <div>
+          <textarea class="form-input"
+            id="message" name="message" placeholder="Message" required="" rows="6"></textarea>
+        </div>
+        <div class="form-buttons">
+          <button class="btn-reset-form"
+            type="reset">Reset</button>
+          <button class="btn-submit-form"
+            type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    </section>
+    <!-- END: ContactFormSection -->
+  </main>
+  <!-- BEGIN: Footer -->
+  <footer class="bg-white border-t border-pink py-4 px-4">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Shades</a>
+      <div>© 2026 Shades Unisex Salon. All rights reserved.</div>
+      <div>WhatsApp: (868) 791-9851 &nbsp;|&nbsp; El Dorado, Trinidad</div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+<script src="js/hamburger.js"></script>
+</body>
+
+</html>

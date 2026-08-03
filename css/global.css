@@ -1,0 +1,366 @@
+/* ============================================
+   Shades Unisex Salon — Global Stylesheet
+   ============================================ */
+
+/* --- Design Tokens --- */
+:root {
+  --pink: #f4d0d9;
+  --plum: #6b4c5e;
+  --plum-dark: #4a1e36;
+  --plum-muted: #8a5e68;
+  --bg: #fbf9f8;
+  --muted: #dcd9d9;
+  --text: #2d2d2d;
+  --text-soft: #333333;
+}
+
+/* --- Typography --- */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, .serif, .logo {
+  font-family: 'Playfair Display', serif;
+}
+
+/* --- Component Classes --- */
+
+/* Site layout - header, nav, footer */
+.site-header {
+  background-color: white;
+  border-bottom: 1px solid var(--pink);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.nav-list {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4b5563;
+}
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2.5rem;
+    text-align: left;
+  }
+  .footer-inner > :nth-child(1) { order: 2; }   /* Shades logo → center */
+  .footer-inner > :nth-child(2) { order: 1; }   /* copyright → left */
+  .footer-inner > :nth-child(3) { order: 3; }   /* contact → right */
+}
+
+/* Brand logo in nav */
+.nav-logo {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.025em;
+  color: var(--plum);
+  transition: color 0.15s ease;
+}
+@media (min-width: 768px) {
+  .nav-logo {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+.nav-logo:hover {
+  color: var(--plum-dark);
+}
+
+/* Brand logo in footer */
+.footer-logo {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.025em;
+  color: var(--plum);
+  transition: color 0.15s ease;
+}
+.footer-logo:hover {
+  color: var(--plum-dark);
+}
+
+/* Inactive nav link */
+.nav-link {
+  transition: color 0.15s ease;
+}
+.nav-link:hover {
+  color: var(--plum-dark);
+}
+
+/* Active nav link (current page) */
+.nav-link-active {
+  color: var(--plum);
+  border-bottom-width: 2px;
+  border-color: var(--plum);
+}
+
+/* Book Now button in header */
+.btn-book {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--plum);
+  color: var(--plum);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  display: inline-block;
+}
+.btn-book:hover {
+  background-color: var(--plum);
+  color: white;
+}
+
+/* ============================================
+   Mobile Hamburger Menu
+   ============================================ */
+
+/* Hamburger button — visible only on mobile */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 60;
+}
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--plum);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Animate into X when active */
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* Mobile dropdown panel */
+.mobile-menu {
+  display: none;
+  background-color: white;
+  border-top: 1px solid var(--pink);
+  padding: 1rem 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.mobile-menu.open {
+  display: block;
+  animation: menuSlideDown 0.25s ease forwards;
+}
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Mobile nav link list */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile nav link (inactive) */
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4b5563;
+  border-bottom: 1px solid var(--pink);
+  transition: color 0.15s ease;
+}
+.mobile-nav-link:hover {
+  color: var(--plum-dark);
+}
+
+/* Mobile nav link (active / current page) */
+.mobile-nav-link-active {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--plum);
+  border-bottom: 2px solid var(--plum);
+  transition: color 0.15s ease;
+}
+
+/* Full-width Book Now button inside mobile menu */
+.mobile-btn-book {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--plum);
+  color: var(--plum);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.15s ease;
+}
+.mobile-btn-book:hover {
+  background-color: var(--plum);
+  color: white;
+}
+
+/* Mobile header adjustments: hamburger left, logo center, hide desktop items */
+@media (max-width: 767px) {
+  .header-inner {
+    justify-content: flex-start;
+  }
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .text-right {
+    display: none;
+  }
+}
+
+/* --- Text Tiers --- */
+
+/* Page title H1 */
+.title-page {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .title-page {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+/* Major section H2 */
+.title-section {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Intro / sub-headings (replaces text-2xl → md:text-3xl) */
+.heading-intro {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (min-width: 768px) {
+  .heading-intro {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Section title (replaces text-3xl) */
+.heading-section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+/* Card heading (replaces text-xl) */
+.heading-card {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* Medium heading / standalone text-2xl */
+.heading-md {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/* Lead body text (replaces text-lg) */
+.text-lead {
+  font-size: 1.1875rem;
+  line-height: 1.8;
+}
+
+
+
+
